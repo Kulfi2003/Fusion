@@ -19627,6 +19627,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6771176642325104716}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   gameOverEventWithRating:
     m_PersistentCalls:
       m_Calls:
@@ -19681,6 +19693,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8733585297640540278}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6771176642325104716}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19761,8 +19785,8 @@ MonoBehaviour:
   moveForce: 50
   newVelocity: {x: 0, y: 0, z: 0}
   LevelLoader: {fileID: 7953669135206226107}
-  level: 28
-  testingLevels: 1
+  level: 29
+  testingLevels: 0
 --- !u!114 &2738431856634654965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19890,6 +19914,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6771176642325104716}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   OnSkipLevel:
     m_PersistentCalls:
@@ -37294,7 +37330,7 @@ PrefabInstance:
     - target: {fileID: 1428222235453847050, guid: 787fc3cd7fa53134e82f31b9c3293074,
         type: 3}
       propertyPath: m_Name
-      value: ButtonPromptParticles (1)
+      value: HintParticles
       objectReference: {fileID: 0}
     - target: {fileID: 4449366771637335239, guid: 787fc3cd7fa53134e82f31b9c3293074,
         type: 3}
@@ -37366,6 +37402,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 787fc3cd7fa53134e82f31b9c3293074, type: 3}
+--- !u!1 &6771176642325104716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1428222235453847050, guid: 787fc3cd7fa53134e82f31b9c3293074,
+    type: 3}
+  m_PrefabInstance: {fileID: 5632347036087991878}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8328649161253653121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4449366771637335239, guid: 787fc3cd7fa53134e82f31b9c3293074,

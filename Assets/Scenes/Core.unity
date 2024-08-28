@@ -566,19 +566,9 @@ PrefabInstance:
       objectReference: {fileID: 912028889}
     - target: {fileID: 899407511364619024, guid: de19a0c9d0503b24fb37f4b2457f7477,
         type: 3}
-      propertyPath: level
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 899407511364619024, guid: de19a0c9d0503b24fb37f4b2457f7477,
-        type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1711823955}
-    - target: {fileID: 899407511364619024, guid: de19a0c9d0503b24fb37f4b2457f7477,
-        type: 3}
-      propertyPath: testingLevels
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1625345040103444877, guid: de19a0c9d0503b24fb37f4b2457f7477,
         type: 3}
       propertyPath: OnToggleOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
