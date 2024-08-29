@@ -57,8 +57,8 @@ public class HintSystem : MonoBehaviour
     }
 
     public AnimationCurve curve;
-    [SerializeField] float waveSpeed = 10f;
-    [SerializeField] float cubeDuration = 1f;
+    const float waveSpeed = 7.5f;
+    const float cubeDuration = 0.6f;
 
     //IEnumerator MoveCubeUpAndDown(GameObject cube)
     //{
