@@ -10,7 +10,6 @@ public class SwipeInput : MonoBehaviour
     public float ignoreSwipeIfShorterThan;
     private float dpiScaleFactor;
     [SerializeField] GameManager GameManager;
-    [SerializeField] Text text;
 
     private void Start()
     {
@@ -78,7 +77,6 @@ public class SwipeInput : MonoBehaviour
         float horizontalSwipeDistance = Mathf.Abs(swipeVector.x);
         float verticalSwipeDistance = Mathf.Abs(swipeVector.y);
 
-        text.text = horizontalSwipeDistance.ToString() + ", " + verticalSwipeDistance.ToString();
 
         if (Vector3.Distance(startTouchPosition, endTouchPosition) > ignoreSwipeIfShorterThan)
         {

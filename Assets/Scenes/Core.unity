@@ -201,6 +201,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5417590172407715615, guid: 1a9bfb1a7d727544798401a98fd7256e,
         type: 3}
+      propertyPath: isTesting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417590172407715615, guid: 1a9bfb1a7d727544798401a98fd7256e,
+        type: 3}
+      propertyPath: interstitialId
+      value: ca-app-pub-6069243694115928/9618908793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417590172407715615, guid: 1a9bfb1a7d727544798401a98fd7256e,
+        type: 3}
       propertyPath: eventOnLoadFailed.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -649,6 +659,11 @@ PrefabInstance:
       propertyPath: OnToggleOff.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1499679929}
+    - target: {fileID: 3829936407769117625, guid: de19a0c9d0503b24fb37f4b2457f7477,
+        type: 3}
+      propertyPath: gameURL
+      value: https://play.google.com
+      objectReference: {fileID: 0}
     - target: {fileID: 7286545103322453601, guid: de19a0c9d0503b24fb37f4b2457f7477,
         type: 3}
       propertyPath: onCubeTouched.m_PersistentCalls.m_Calls.Array.data[3].m_Target

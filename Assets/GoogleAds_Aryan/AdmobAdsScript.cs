@@ -6,12 +6,12 @@ using UnityEngine.Events;
 
 public class AdmobAdsScript : MonoBehaviour
 {
-    public string appId = "ca-app-pub-6069243694115928~7751394989";
+    const string appId = "ca-app-pub-6069243694115928~7751394989";
 
-    [SerializeField] bool isTesting;
-    [SerializeField] string bannerId;
-    [SerializeField] string rewardedId;
-    [SerializeField] string interstitialId;
+    const bool isTesting = true;
+    private string bannerId = "ca-app-pub-6069243694115928/1016695742";
+    private string rewardedId = "ca-app-pub-6069243694115928/6075351233";
+    private string interstitialId = "ca-app-pub-6069243694115928/9618908793";
     [SerializeField] float timeBetweenBanners = 20f;
 
 

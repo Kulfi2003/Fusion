@@ -47,7 +47,7 @@ public class LevelButton : MonoBehaviour
             if (int.TryParse(numberString, out int extractedLevel))
             {
                 level = extractedLevel;
-                Debug.Log("Extracted level: " + level);
+                //Debug.Log("Extracted level: " + level);
             }
             else
             {

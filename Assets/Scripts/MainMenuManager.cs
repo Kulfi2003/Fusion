@@ -16,6 +16,7 @@ public class MainMenuManager : MonoBehaviour
     private void Awake()
     {
         totalLevels = SceneManager.sceneCountInBuildSettings - 2;
+        print("total levels number is " + totalLevels);
 
         if (!PlayerPrefs.HasKey("currentLevel"))
         {
@@ -51,12 +52,25 @@ public class MainMenuManager : MonoBehaviour
         }
 
         //Setting camera bounds
-        cameraPan.panLimitMin.y = levelButtons[currentLevel - 1].transform.position.z - 10;
+        if (currentLevel < totalLevels)
+        {
+            //print(currentLevel + " , " + totalLevels);
+            cameraPan.panLimitMin.y = levelButtons[currentLevel - 1].transform.position.z - 10;
+        } else
+        {
+            print("the length of the array is " + levelButtons.Length + " and the index I'm trying to access is " + (totalLevels - 1));
+            cameraPan.panLimitMin.y = levelButtons[totalLevels-1].transform.position.z - 10;
+        }
+        
+
 
         //Disabling all buttons first
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            levelButtons[i].SetActive(false);
+            //if (i < totalLevels)
+            //{
+                levelButtons[i].SetActive(false);
+            //}
         }
 
         //Enabling the buttons that have been enabled
@@ -68,8 +82,11 @@ public class MainMenuManager : MonoBehaviour
             }
         }
 
+        print("got here now");
+
         if (currentLevel < totalLevels+1)
         {
+            //print("THIS PART SHOULDN'T RUN MAN");
             buttonParticles.transform.position = levelButtons[currentLevel-1].transform.position;
 
             //lerps view to the position of the current level.
@@ -79,6 +96,7 @@ public class MainMenuManager : MonoBehaviour
             }
         } else
         {
+            print("aaa");
             //deactivating the particles if the game is complete.
             buttonParticles.SetActive(false);
         }
