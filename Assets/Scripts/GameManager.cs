@@ -205,7 +205,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void gameOverFunction()
+    public void gameOverFunction(bool skipped)
     {
         audioManager.combineSFX.Play();
 
@@ -222,14 +222,13 @@ public class GameManager : MonoBehaviour
         }
 
         // Start coroutine to delay event invocation
-        StartCoroutine(HandleGameOver());
+        StartCoroutine(HandleGameOver(skipped));
     }
 
     int random;
-    private IEnumerator HandleGameOver()
+    private IEnumerator HandleGameOver(bool skipped)
     {
-        // Wait for 2 seconds
-        yield return new WaitForSeconds(pauseAfterGameOver);
+        if (!skipped) yield return new WaitForSeconds(pauseAfterGameOver);
 
         //code that decides whether to send the player to the rate us page or the next level page
         if ((PlayerPrefs.GetInt("Rated")==0) && (LevelLoader.levelNumber > 3 && (LevelLoader.levelNumber+1)%3 == 0))

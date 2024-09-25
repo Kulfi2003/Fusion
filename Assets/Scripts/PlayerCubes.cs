@@ -13,7 +13,7 @@ public class PlayerCubes : MonoBehaviour
             GameObject gameManagerObject = GameObject.Find("GameManager");
             GameManager gameManager = gameManagerObject.GetComponent<GameManager>();
             gameManager.gameOver = true;
-            gameManager.gameOverFunction();
+            gameManager.gameOverFunction(false);
             OnWin.Invoke();
         }
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
 using UnityEngine.Events;
+using TMPro;
 
 public class AdmobAdsScript : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class AdmobAdsScript : MonoBehaviour
     private string interstitialId = "ca-app-pub-6069243694115928/9618908793";
     [SerializeField] float timeBetweenBanners = 20f;
 
+    [SerializeField] TextMeshPro watchAd, skipLevel;
 
     private void Awake()
     {
@@ -22,6 +24,9 @@ public class AdmobAdsScript : MonoBehaviour
             bannerId = "ca-app-pub-3940256099942544/6300978111";
             rewardedId = "ca-app-pub-3940256099942544/5224354917";
             interstitialId = "ca-app-pub-3940256099942544/1033173712";
+
+            watchAd.text = "\nHint?";
+            skipLevel.text = "Skip Level";
         }
     }
 
@@ -170,6 +175,15 @@ public class AdmobAdsScript : MonoBehaviour
 
     public void ShowRewardedAd()
     {
+        if (isTesting && !Application.isEditor)
+        {
+            print("Give hint to player");
+            EnableHint();
+
+            //Loads next rewarded ad
+            LoadRewardedAd();
+        }
+
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             rewardedAd.Show((Reward reward)=>
@@ -184,24 +198,22 @@ public class AdmobAdsScript : MonoBehaviour
         {
             print("Rewarded ad not ready.");
         }
-        
-        if (isTesting && !Application.isEditor)
-        {
-            print("Give hint to player");
-            EnableHint();
-
-            //Loads next rewarded ad
-            LoadRewardedAd();
-        }
     }
 
     public void ShowRewardedAdToSkip()
     {
+        if (isTesting && !Application.isEditor)
+        {
+            SkipLevel();
+
+            //Loads next rewarded ad
+            LoadRewardedAd();
+        }
+
         if (rewardedAd != null && rewardedAd.CanShowAd())
         {
             rewardedAd.Show((Reward reward) =>
             {
-                print("Give hint to player");
                 SkipLevel();
 
                 //Loads next rewarded ad
@@ -211,7 +223,7 @@ public class AdmobAdsScript : MonoBehaviour
         else
         {
             print("Rewarded ad not ready.");
-        }
+        }        
     }
 
     public void RewardedAdEvents(RewardedAd ad)
